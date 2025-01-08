@@ -1,6 +1,6 @@
 import './style.css';
 
-// Typdefinition för person
+//definerar type för Person
 type Person = {
     name: string;
     height: string;
@@ -20,10 +20,10 @@ type Person = {
     url: string;
   };
   
-  // URL för API:et
+  // API url
   const urlPeople = "https://swapi.py4e.com/api/people/";
   
-  // Funktion för att hämta alla personer
+  // Denna funktion hämtar alla personer
   const fetchPeople = async (): Promise<Person[]> => {
     try {
       const response = await fetch(urlPeople);
@@ -38,30 +38,30 @@ type Person = {
     }
   };
   
-  // Funktion för att fylla dropdown-menyn
-  const populateDropdown = async (people: Person[]) => {
+  // Denna funktion för dropdown menyn
+    const populateDropdown = async (people: Person[]) => {
     const dropdown = document.getElementById("dropdown") as HTMLSelectElement;
   
-    // Rensa dropdown
+    // Rensa dropdown ska man tydligen ha..
     dropdown.innerHTML = '<option value="">Välj en karaktär...</option>';
   
     // Lägg till personer som alternativ
     people.forEach((person, index) => {
       const option = document.createElement("option");
-      option.value = index.toString(); // Spara index som värde
+      option.value = index.toString(); // Denna sparar index som ett värde.
       option.textContent = person.name;
       dropdown.appendChild(option);
     });
   };
   
-  // Funktion för att visa vald persons information
-  const displayPersonInfo = (person: Person) => {
+  // Denna funktion kommer visa det valda personens information 
+    const displayPersonInfo = (person: Person) => {
     const infoDiv = document.getElementById("person-info") as HTMLDivElement;
   
-    // Rensa tidigare information
+  // Rensa tidigare information
     infoDiv.innerHTML = "";
   
-    // Visa all information om personen
+// Denna ska visa all information om det valda personen
     const infoHtml = `
       <h2>${person.name}</h2>
       <p><strong>Höjd:</strong> ${person.height} cm</p>
@@ -79,7 +79,7 @@ type Person = {
     infoDiv.innerHTML = infoHtml;
   };
   
-  // Funktion för att hantera valet i dropdown
+//Denna funktion hanterar det valet i dropdown
   const setupDropdownEvent = (people: Person[]) => {
     const dropdown = document.getElementById("dropdown") as HTMLSelectElement;
   
