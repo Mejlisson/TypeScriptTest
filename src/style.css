@@ -1,0 +1,56 @@
+/* Ställer in grundläggande stil för hela sidan */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Svart bakgrund */
+    color: yellow; /* Gul text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Box för dropdown-menyn */
+  #dropdown-container {
+    background-color: #333; /* Mörkare grå bakgrund */
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Dropdown-stil */
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: yellow;
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 4px;
+  }
+  
+  /* Box för att visa resultat */
+  #person-info {
+    background-color: #222; /* Mörkare grå för resultatboxen */
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  #person-info h2 {
+    margin-top: 0;
+    color: yellow; /* Gul färg för rubrik */
+  }
+  
+  #person-info p {
+    margin: 5px 0;
+  }
+  

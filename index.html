@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>TypeScriptTest</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
   </head>
   <body>
-    <h1 id="myH1">Welcome</h1>
-    <label> Username:</label>
-    <input id="myText" /> <br />
-    <button id="mySubmit">Submit</button>
+    <div id="dropdown-container">
+      <h1>Star Wars API - Välj en karaktär</h1>
+      <select id="dropdown">
+        <option value="">Laddar...</option>
+      </select>
+    </div>
+    <div id="person-info">
+      <p>Välj en karaktär för att se detaljer.</p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
